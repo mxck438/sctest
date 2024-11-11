@@ -7,7 +7,7 @@ SCTest is built around GNU Readline lib, so the libreadline-dev package is requi
 
 # Clone 
 
-    $git clone /..TODO
+    $git clone https://github.com/mxck438/sctest.git
 
 # Build on command line
 
