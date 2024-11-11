@@ -1,0 +1,4 @@
+#pragma once
+#define SCTEST_BUILD_CONFIG @SCTEST_BUILD_CONFIG@
+#define SCTEST_VERSION "@SCTEST_VERSION@"
+#define SCTEST_BUILD_DATE __DATE__ "  " __TIME__

@@ -1,0 +1,39 @@
+{
+    "version": 3,
+    "configurePresets": [
+        {
+            "name": "Linux-base",
+            "description": "Linux GCC using compilers: C = /usr/bin/gcc, CXX = /usr/bin/g++",
+            "binaryDir": "${sourceDir}/build/${presetName}",
+            "hidden": true,
+            "cacheVariables": {
+                "CMAKE_INSTALL_PREFIX": "${sourceDir}/build/${presetName}",
+                "CMAKE_C_COMPILER": "/usr/bin/gcc",
+                "CMAKE_CXX_COMPILER": "/usr/bin/g++",
+                "CMAKE_BUILD_TYPE": "Debug"
+            }
+        },
+        {
+            "name": "x64-Debug-Linux",
+            "displayName": "x64-Debug-Linux",
+            "description": "Target Linux x64 Debug with GCC",
+            "inherits": "Linux-base",
+            "cacheVariables": {
+                "SCTEST_BUILD_CONFIG" : "x64-Debug-Linux"
+            }
+        },
+        {
+            "name": "clang-x64-Debug-Linux",
+            "displayName": "clang-x64-Debug-Linux",
+            "description": "Target Linux x64 Debug with clang",
+            "binaryDir": "${sourceDir}/build/${presetName}",
+            "cacheVariables": {
+                "SCTEST_BUILD_CONFIG" : "clang-x64-Debug-Linux",
+                "CMAKE_INSTALL_PREFIX": "${sourceDir}/build/${presetName}",
+                "CMAKE_C_COMPILER": "/usr/bin/clang",
+                "CMAKE_CXX_COMPILER": "/usr/bin/clang++",
+                "CMAKE_BUILD_TYPE": "Debug"
+            }
+        }
+    ]
+}
